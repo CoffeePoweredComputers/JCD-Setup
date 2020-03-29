@@ -1,2 +1,11 @@
-https://aur.archlinux.org/vim-pathogen.git
+vim-pathogen
+zoom
+blitz
+bluez-utils-compat
+bumblebee-status
+r-devel
+rstudio-desktop-bin
+pycharm-community
+visual-studio-code-bin
+brackets-bin
 
