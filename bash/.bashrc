@@ -1,0 +1,82 @@
+#Make my prompt a little more interesting
+export PS1="\[\e[35m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]-> "
+
+#dictonary shortcut
+alias define="sdcv"
+
+#open an ssh tunnel to wwu
+alias sshtunnel="touch ~/.ssh/known_hosts && rm ~/.ssh/known_hosts && ssh -p 922 -L 4321:mysql.cs.wwu.edu:3306 smithd77@linux.cs.wwu.edu"
+
+#list some stuff
+alias ll="ls -lhSa"
+
+#get online
+alias wifiplease="sudo wifi-menu"
+
+#keep me from being an idiot
+alias rm="rm -i"
+
+##
+export VMAIL_BROWSER='elinks'
+
+# Im so very tired of allways using these three commands....
+alias gtexpush="git add *.tex *.pdf && git commit -m \" generic tex update\" && git push"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Just some useful aliases
+alias ls='ls --color=auto'
+
+#cleans all class files out of java project
+classclean (){
+	find . -name \*.class -delete 	
+}
+
+#make a directory then access it
+mkcd(){
+	mkdir -p -- "$1" && cd -P -- "$1"
+}
+
+
+#makes a pages css and jsx files
+mkjsxpg(){
+	touch "$1.css" && touch "$1.jsx"
+}
+
+asmexc(){
+	#read -p "enter asm type: " response
+	
+	#if[ $response = "64bit" ] then
+		nasm -f elf64 $1
+		ld -s -o testexc "${1%.*}.o"
+	
+}
+
+#unzips all .zip folders in current directory
+unzipdir(){
+	find . -name "*.zip" | while read filename; do unzip -o -d "`basename -s .zip "$filename"`" "$filename"; done;	
+}
+
+#removes all .zip folders in current directory
+cleanzip(){
+	find . -name "*.zip" | while read filename; do rm "$filename"; done;
+}
+
+#removes all swap files from a directory
+cleanswp(){
+	find . -type f -name "*.sw[klmnop]" -delete
+}
+
+#matrix effect
+matrix(){
+	echo -e "\e[1;40m" ; clear ; while :; do echo $LINES $COLUMNS $(( $RANDOM % $COLUMNS)) $(( $RANDOM % 72 )) ;sleep 0.05; done|awk '{ letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()"; c=$4; letter=substr(letters,c,1);a[$3]=0;for (x in a) {o=a[x];a[x]=a[x]+1; printf "\033[%s;%sH\033[2;32m%s",o,x,letter; printf "\033[%s;%sH\033[1;37m%s\033[0;0H",a[x],x,letter;if (a[x] >= $1) { a[x]=0; } }}'
+}
+
+#count all files in a given directory
+count(){
+	ls -l $1 | egrep -c '^-'	
+}
+
+#star wars!!
+alias starwars="telnet towel.blinkenlights.nl"
