@@ -1,11 +1,10 @@
-vim-pathogen
-zoom
 blitz
 bluez-utils-compat
+brackets-bin
 bumblebee-status
+compton-tryone-git
 r-devel
 rstudio-desktop-bin
-pycharm-community
+vim-pathogen
 visual-studio-code-bin
-brackets-bin
-
+zoom
