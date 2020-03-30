@@ -4,9 +4,6 @@ export PS1="\[\e[35m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]-> "
 #dictonary shortcut
 alias define="sdcv"
 
-#open an ssh tunnel to wwu
-alias sshtunnel="touch ~/.ssh/known_hosts && rm ~/.ssh/known_hosts && ssh -p 922 -L 4321:mysql.cs.wwu.edu:3306 smithd77@linux.cs.wwu.edu"
-
 #list some stuff
 alias ll="ls -lhSa"
 
