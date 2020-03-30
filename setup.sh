@@ -58,8 +58,8 @@ ln -sv ~/Projects/JCD-Setup/bash/.bashrc ~/
 # Dot Files Setup
 ##################################################
 
- Rather than linking the whole .config we want to maintain the current .config
- and only update it with the folders and files in the global .config
+#Rather than linking the whole .config we want to maintain the current .config
+#and only update it with the folders and files in the global .config
 
 for f in "./config/*"
 do
