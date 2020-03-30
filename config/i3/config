@@ -203,7 +203,7 @@ bar {
 	font pango:Ubuntu 7 
 	position bottom 
 	tray_output none
-	status_command /bin/bumblebee-status -m  arch-update github disk:root cpu memory battery discordstatus date time -p root.path=/ time.format="%H:%M" date.format="%a, %b %d %Y" -t purp-powerline
+	status_command /bin/bumblebee-status -m  arch-update github disk:root cpu memory battery date time -p root.path=/ time.format="%H:%M" date.format="%a, %b %d %Y" -t purp-powerline
 }
 
 

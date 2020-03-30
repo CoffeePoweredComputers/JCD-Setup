@@ -1,2 +1,5 @@
-./vim/.vim/bundle/*
-!./vim/.vim/bundle/plugin-installer.sh
+vim/.vim/bundle/*
+!vim/.vim/bundle/plugin-installer.sh
+vim/.vim/.netrwhist
+yay/
+
