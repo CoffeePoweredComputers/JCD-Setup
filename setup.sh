@@ -9,20 +9,20 @@
 # Installs all Packages 
 ##################################################
 
-echo "Updating system"
-sudo pacman -Syu
-
-echo "Installing all official packages"
-sudo pacman -S --needed -< ./packages/pkg-list-official.txt
-
-echo "Installing yay (yet another yogurt) to install all aur"
-git clone https://aur.archlinux.org/yay.git/
-cd yay
-makepkg -sri
-cd ..
-
-echo "Installing all unofficial packages"
-yay -S --needed -< ./packages/pkg-list-aur.txt
+#echo "Updating system"
+#sudo pacman -Syu
+#
+#echo "Installing all official packages"
+#sudo pacman -S --needed -< ./packages/pkg-list-official.txt
+#
+#echo "Installing yay (yet another yogurt) to install all aur"
+#git clone https://aur.archlinux.org/yay.git/
+#cd yay
+#makepkg -sri
+#cd ..
+#
+#echo "Installing all unofficial packages"
+#yay -S --needed -< ./packages/pkg-list-aur.txt
 
 ##################################################
 # Vim Setup
@@ -34,15 +34,15 @@ echo "Symlinking vim configuration files and directories"
 rm ~/.vimrc > /dev/null
 rm -r ~/.vim > /dev/null
 
-ln -sv ~/Projects/JCD-Setup/vim/.vimrc ~/
-ln -sv ~/Projects/JCD-Setup/vim/.vim ~/
+ln -sv ~/Git/JCD-Setup/vim/.vimrc ~/
+ln -sv ~/Git/JCD-Setup/vim/.vim ~/
 
 # Install all of the vim plugins
-
-cd ./vim/.vim/bundle/
-chmod +x plugin-installer.sh
-./plugin-installer.sh
-cd ../../../
+#
+#cd ./vim/.vim/bundle/
+#chmod +x plugin-installer.sh
+#./plugin-installer.sh
+#cd ../../../
 
 
 ##################################################
@@ -52,7 +52,7 @@ cd ../../../
 echo "Symlinking bashrc"
 
 rm ~/.bashrc > /dev/null
-ln -sv ~/Projects/JCD-Setup/bash/.bashrc ~/
+ln -sv ~/Git/JCD-Setup/bash/.bashrc ~/
 
 ##################################################
 # Dot Files Setup
@@ -65,7 +65,7 @@ for f in "./config/*"
 do
   f=$(basename "$f")
   rm -r ~/.config/$f
-  ln -sv ~/Projects/JCD-Setup/config/$f ~/.config/
+  ln -sv ~/Git/JCD-Setup/config/$f ~/.config/
 
 done
 

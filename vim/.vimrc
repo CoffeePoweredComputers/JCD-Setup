@@ -20,9 +20,12 @@ set guifont=3270\ Narrow\ Nerd\ Font\ Complete\ 8
 nnoremap <C-h> gT
 nnoremap <C-l> gt
 
+"alias vim to neovim
+alias vim='nvim'
+
 "set the default viewer for vimtex
 let g:vimtex_view_method = 'zathura'
-let g:vimtext_compiler_latexmk_engines = "xelatex"
+let g:vimtext_compiler_latexmk_engines = "lualatex"
 let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
 
 "set config file for ycm

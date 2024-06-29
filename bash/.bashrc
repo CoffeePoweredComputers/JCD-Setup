@@ -1,5 +1,4 @@
-#Make my prompt a little more interesting
-export PS1="\[\e[35m\]\u\[\e[m\]@\[\e[35m\]\h\[\e[m\]-> "
+export PATH=$PATH:/home/jcd/.local/bin
 
 #dictonary shortcut
 alias define="sdcv"
@@ -77,3 +76,16 @@ count(){
 
 #star wars!!
 alias starwars="telnet towel.blinkenlights.nl"
+
+# gitignores
+alias getgitignore="curl -L -s https://www.toptal.com/developers/gitignore/api/$1"
+
+# alias to open docker interactive terminal for a given container
+alias dit="docker exec -it $1 /bin/bash"
+
+# alias to run docker container on port 8080
+alias drun="docker run -p 8080:8080 $1"
+
+#alisas to list all docker containers
+alias dls="docker ps -a"
+
